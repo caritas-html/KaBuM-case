@@ -6,3 +6,4 @@ temp/
 coverage
 ormconfig.json
 dist
+yarn-error.log
