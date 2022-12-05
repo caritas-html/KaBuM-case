@@ -1,15 +1,17 @@
 import { Router } from "express";
 import CostumerController from "../controllers/CostumerController";
 import { celebrate, Joi, Segments } from "celebrate";
+import isAuthenticated from "@modules/users/middlewares/isAuthenticated";
 
 const costumerRouter = Router();
 const costumerController = new CostumerController();
 
-costumerRouter.get("/", costumerController.index);
+costumerRouter.get("/", isAuthenticated, costumerController.index);
 
 // routes with celebrate validation
 costumerRouter.post(
   "/",
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -28,6 +30,7 @@ costumerRouter.post(
 
 costumerRouter.put(
   "/:id",
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().uuid().required(),
@@ -47,6 +50,7 @@ costumerRouter.put(
 
 costumerRouter.delete(
   "/:id",
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().uuid().required(),
