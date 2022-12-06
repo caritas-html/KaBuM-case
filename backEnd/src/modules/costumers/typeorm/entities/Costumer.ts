@@ -1,7 +1,9 @@
+import Address from "../../../address/typeorm/entities/Address";
 import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
@@ -31,6 +33,11 @@ class Costumer {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @OneToMany((type) => Address, (address) => address.costumer, {
+    cascade: true,
+  })
+  address: Address[];
 }
 
 export default Costumer;
