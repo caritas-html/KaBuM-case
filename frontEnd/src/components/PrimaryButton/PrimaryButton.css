@@ -1,0 +1,12 @@
+.primary_button_wrapper {
+  margin-top: 2rem;
+}
+
+.primary_button {
+  padding: 0.6rem;
+  background-color: #85c7f2;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

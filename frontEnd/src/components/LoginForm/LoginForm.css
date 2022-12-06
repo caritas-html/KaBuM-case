@@ -1,0 +1,19 @@
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login_image {
+  width: 7rem;
+}

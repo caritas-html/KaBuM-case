@@ -23,15 +23,15 @@ class CreateCostumerService {
 
     const costumerName = await costumersRepository.findByName(name);
     if (costumerName)
-      throw new AppError("There is already a costumer with this name");
+      throw new AppError("There is already a custumer with this name");
 
     const costumerCpf = await costumersRepository.findByCpf(cpf);
     if (costumerCpf)
-      throw new AppError("There is already a costumer with this CPF");
+      throw new AppError("There is already a custumer with this CPF");
 
     const costumerRg = await costumersRepository.findByRg(rg);
     if (costumerRg)
-      throw new AppError("There is already a costumer with this CPF");
+      throw new AppError("There is already a custumer with this RG");
 
     const costumer = costumersRepository.create({
       name,
