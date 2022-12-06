@@ -6,9 +6,12 @@ type props = {
 };
 
 const PrimaryButton: React.FC<props> = ({ children }) => {
+  const login = () => {};
   return (
     <div className="primary_button_wrapper">
-      <button className="primary_button">{children}</button>
+      <button className="primary_button" onClick={() => login(email, password)}>
+        {children}
+      </button>
     </div>
   );
 };

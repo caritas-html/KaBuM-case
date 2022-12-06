@@ -10,3 +10,9 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
+@media (min-width: 720px) {
+  .main_block {
+    max-width: 630px;
+  }
+}

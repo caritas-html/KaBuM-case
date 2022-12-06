@@ -17,3 +17,9 @@
   margin: 1rem 0;
   color: #fff;
 }
+
+@media (min-width: 720px) {
+  .input_item {
+    padding: 1rem;
+  }
+}

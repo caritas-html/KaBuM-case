@@ -10,3 +10,9 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media (min-width: 720px) {
+  .primary_button {
+    padding: 1rem;
+  }
+}
