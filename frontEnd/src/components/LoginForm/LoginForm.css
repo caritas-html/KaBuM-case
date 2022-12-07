@@ -1,6 +1,7 @@
 .form_wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0 2rem;
 }
 
@@ -15,5 +16,5 @@
 }
 
 .login_image {
-  width: 7rem;
+  width: 5rem;
 }

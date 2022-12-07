@@ -1,0 +1,21 @@
+.lottie_wrapper {
+  height: 50vh;
+}
+
+.about_wrapper {
+  background-color: #597ba8;
+  height: 40%;
+  font-size: 1.3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8rem;
+}
+
+@media (min-width: 850px) {
+  .about_wrapper {
+    height: 30%;
+    border-radius: 20px;
+  }
+}

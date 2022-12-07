@@ -1,44 +1,45 @@
 import React, { useState } from "react";
-import "./LoginForm.css";
+import "./RegisterForm.css";
 import InputForm from "../InputForm/InputForm";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import LoginSvg from "../../assets/login.svg";
-import api from "../../utils/api";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import api from "../../utils/api";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const navigate = useNavigate();
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginUser = (event: React.FormEvent) => {
+  const registerUser = (event: React.FormEvent) => {
     event.preventDefault();
     axios
-      .post(`${api.address}/sessions`, { email, password })
+      .post(`${api.address}/users`, { name, email, password })
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        navigate("/home");
+        console.log(res.data);
+        navigate("/login");
       })
-      .catch((err) => toast(err.response.data.message));
+      .catch((err) => {
+        console.log(err.response.message);
+        toast(err.response.data.message);
+      });
   };
-
-  const handleRegister = () => {
-    navigate("/register");
-  };
-
   return (
     <div className="form_wrapper">
-      <form onSubmit={loginUser}>
+      <form onSubmit={registerUser}>
         <div className="title_wrapper">
-          <h1>Login</h1>
+          <h1>Register</h1>
         </div>
-        <div className="image_wrapper">
-          <img className="login_image" src={LoginSvg} />
-        </div>
+        <InputForm
+          value={(e) => {
+            setName(e.currentTarget.value);
+          }}
+          type="name"
+          name="Name"
+        />
         <InputForm
           value={(e) => {
             setEmail(e.currentTarget.value);
@@ -53,11 +54,8 @@ const LoginForm = () => {
           type="password"
           name="Password"
         />
-        <div className="button_wrapper">
-          <PrimaryButton type="submit">Login</PrimaryButton>
-          <PrimaryButton onPress={handleRegister} type="button">
-            Register
-          </PrimaryButton>
+        <div className="register_button_wrapper">
+          <PrimaryButton type="submit">Sign Up</PrimaryButton>
         </div>
       </form>
       <ToastContainer />
@@ -65,4 +63,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

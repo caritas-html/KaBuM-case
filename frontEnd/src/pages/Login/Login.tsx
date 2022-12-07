@@ -1,10 +1,12 @@
+import Header from "../../components/Header/Header";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MainBlock from "../../components/MainBlock/MainBlock";
-import "./Home.css";
+import "../../index.css";
 
-function Home() {
+function Login() {
   return (
     <>
+      <Header />
       <div className="background_wrapper">
         <MainBlock>
           <LoginForm />
@@ -14,4 +16,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Login;
