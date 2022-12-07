@@ -31,8 +31,8 @@ addressRouter.get(
   addressController.find
 );
 
-addressRouter.delete(
-  "/:id",
+addressRouter.patch(
+  "/",
   isAuthenticated,
   celebrate({
     [Segments.BODY]: {

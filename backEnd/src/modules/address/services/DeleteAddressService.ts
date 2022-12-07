@@ -8,7 +8,10 @@ interface IRequest {
 }
 
 class DeleteAddressService {
-  public async execute({ costumer_id, address }: IRequest): Promise<void> {
+  public async execute({
+    costumer_id,
+    address,
+  }: IRequest): Promise<string[] | undefined> {
     const addressRepository = getCustomRepository(AddressRepository);
 
     const findAddress = await addressRepository.findById(costumer_id);
@@ -24,6 +27,8 @@ class DeleteAddressService {
     );
 
     await addressRepository.saveAddress(costumer_id, resultArray as string[]);
+
+    return resultArray;
   }
 }
 

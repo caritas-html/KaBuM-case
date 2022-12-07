@@ -1,6 +1,6 @@
 import AppError from "@shared/errors/AppError";
 import { NextFunction, Request, Response } from "express";
-import { verify } from "jsonwebtoken";
+import { verify, Secret } from "jsonwebtoken";
 import authConfig from "@config/auth";
 
 function isAuthenticated(
@@ -17,7 +17,7 @@ function isAuthenticated(
 
   // verify if the received token is from the application hashed secret
   try {
-    verify(token, authConfig.jwt.secret);
+    verify(token, authConfig.jwt.secret as Secret);
 
     return next();
   } catch {

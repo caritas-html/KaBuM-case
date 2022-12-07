@@ -13,7 +13,8 @@ class FindAddressService {
 
     const address = await addressRepository.findById(id);
 
-    if (!address) throw new AppError("there is no custumer with this id");
+    if (!address)
+      throw new AppError("This customer has no address registrated");
 
     return address as Address;
   }

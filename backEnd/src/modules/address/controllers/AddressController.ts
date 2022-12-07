@@ -43,9 +43,12 @@ class AddressController {
 
     const deleteAddress = new DeleteAddressService();
 
-    await deleteAddress.execute({ costumer_id, address });
+    const deleteAddressResponse = await deleteAddress.execute({
+      costumer_id,
+      address,
+    });
 
-    return response.json([]);
+    return response.json(deleteAddressResponse);
   }
 }
 

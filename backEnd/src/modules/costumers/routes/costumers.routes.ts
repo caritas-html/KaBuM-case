@@ -20,9 +20,7 @@ costumerRouter.post(
         .regex(/[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}/)
         .required(),
       rg: Joi.string().required(),
-      phone: Joi.string()
-        .regex(/^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/)
-        .required(),
+      phone: Joi.string().length(11).required(),
     },
   }),
   costumerController.create

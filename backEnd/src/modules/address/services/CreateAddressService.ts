@@ -14,10 +14,16 @@ class CreateAddressService {
 
     const spreadAddress = await addressRepository.findById(costumer_id);
 
+    if (!spreadAddress?.address) {
+      const result = await addressRepository.saveAddress(costumer_id, [
+        address,
+      ]);
+      return result as Address;
+    }
+
     const findAddress = spreadAddress?.address.map(
       (el) => el.trim().toUpperCase() === address.trim().toUpperCase()
     );
-
     if (spreadAddress?.address.includes("undefined"))
       spreadAddress.address.unshift();
 
