@@ -1,0 +1,19 @@
+.address_modal_wrapper {
+  background-color: #e0c76c;
+  position: fixed;
+  min-width: 300px;
+  left: 200px;
+  top: 40px;
+  color: #000;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.modal_inside_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}

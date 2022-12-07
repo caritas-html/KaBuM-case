@@ -1,0 +1,9 @@
+.cell_wrapper {
+  width: 80%;
+}
+
+.customers_infos_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
