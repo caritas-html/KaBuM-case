@@ -4,11 +4,11 @@ Olá, este é um projeto, em um monorepo, feito em nodeJS, Typescript, Typeorm c
 
 Passos para executar este projeto:
 
-## requisitos: 
+# requisitos: 
 1. NodeJS instalado na máquina
 2. Docker instalado na máquina
 
-# Frontend
+## Frontend
 
 1. Na pasta raiz do projeto, acesse o frontend `cd frontEnd` depois rode `npm install`
 2. inicialize o frontend com o comando `npm run dev`
