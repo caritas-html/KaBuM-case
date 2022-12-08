@@ -22,7 +22,7 @@ const Header = () => {
       <ul className="content_wrapper">
         <li>
           <Link className="link_content" to={`/home`}>
-            Custumer Manager
+            Customer Manager
           </Link>
         </li>
         {token ? (

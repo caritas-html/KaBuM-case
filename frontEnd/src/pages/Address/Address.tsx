@@ -38,7 +38,7 @@ const Address = () => {
 
   useEffect(() => {
     setCustomerName(searchParams.get("customerName") as string);
-  });
+  }, []);
   return (
     <>
       <Header />
@@ -52,7 +52,14 @@ const Address = () => {
               type="name"
               name={`${customerName} Address`}
             />
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              (pass multiple address with a simple comma "," between address)
               <PrimaryButton type="submit">Add Adress</PrimaryButton>
             </div>
           </form>

@@ -1,16 +1,27 @@
 .primary_button {
-  padding: 0.7rem;
-  background-color: #85c7f2;
+  padding: 0.3rem;
+  background: rgba(131, 192, 233, 0.863);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 1.2rem;
-  color: #636262;
+  color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-family: "Space Grotesk";
+  transition-duration: 0.5s;
+  opacity: 0.8;
 }
 
 @media (min-width: 720px) {
   .primary_button {
     padding: 0.7rem;
+  }
+
+  .primary_button:hover {
+    opacity: 1;
   }
 }

@@ -49,15 +49,15 @@ const AddressModal = ({ isOpen, address, customerId }: IProps) => {
                 key={`${address}${idx}`}
               >
                 <AddressCard>
-                  <>
-                    {addressName}
+                  <div className="inside_card_wrapper">
+                    <div style={{ marginRight: "10px" }}>{addressName}</div>
                     <PrimaryButton
                       onPress={() => deleteAddress(addressName)}
                       type="button"
                     >
                       delete
                     </PrimaryButton>
-                  </>
+                  </div>
                 </AddressCard>
               </div>
             ))}

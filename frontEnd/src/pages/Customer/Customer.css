@@ -1,7 +1,16 @@
 .customer_create_wrapper {
-  background-color: #597ba8;
+  background: rgba(69, 51, 172, 0.664);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
   padding: 1rem;
   width: 80%;
   border-radius: 10px;
   margin: 1rem 0;
+}
+
+@media (min-width: 720px) {
+  .customer_create_wrapper {
+    width: 40%;
+  }
 }

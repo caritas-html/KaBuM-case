@@ -1,6 +1,9 @@
 .costumer_card_wrapper {
-  background-color: #e3dcc2;
-  color: #2d2d2d;
+  background: rgba(24, 23, 23, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  color: #fff;
   margin: 0.5rem 0;
   border-radius: 10px;
   padding: 1rem;

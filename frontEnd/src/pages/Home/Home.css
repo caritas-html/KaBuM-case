@@ -7,3 +7,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.add_button_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 0 auto;
+}

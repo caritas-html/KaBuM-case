@@ -52,13 +52,17 @@ const Home = () => {
     });
   };
 
+  const toggleModal = () => {
+    setIsOpenModal(!isOpenModal);
+  };
+
   const openAddressModal = async (costumerId: string): Promise<void> => {
     await axios
       .get(`${api.address}/costumers/address/${costumerId}`, config)
       .then((res) => {
         setAddress(res.data.address);
         if (res.data.address.length) {
-          setIsOpenModal(true);
+          toggleModal();
         } else {
           toast("There is no address registered on this customer");
         }
@@ -97,9 +101,9 @@ const Home = () => {
 
       {token ? (
         <div className="background_wrapper">
-          <div style={{ marginTop: "1rem" }}>
+          <div className="add_button_wrapper" style={{ marginTop: "1rem" }}>
             <PrimaryButton onPress={createCustumer} type="button">
-              Add Costumer
+              Add Customer
             </PrimaryButton>
           </div>
           <div className="cell_wrapper">

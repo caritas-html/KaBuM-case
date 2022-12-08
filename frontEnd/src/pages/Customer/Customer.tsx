@@ -80,7 +80,13 @@ const Customer = () => {
               type="number"
               name="Phone (11 digits)"
             />
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "0.5rem 0",
+              }}
+            >
               <PrimaryButton type="submit">createCustomer</PrimaryButton>
             </div>
           </form>

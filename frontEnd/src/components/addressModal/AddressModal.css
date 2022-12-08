@@ -1,9 +1,14 @@
 .address_modal_wrapper {
-  background-color: #e0c76c;
-  position: fixed;
-  min-width: 300px;
-  left: 200px;
-  top: 40px;
+  background: rgba(75, 75, 75, 0.801);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  width: 80%;
+  left: 50%;
+  top: 50%;
   color: #000;
   border-radius: 10px;
   padding: 2rem;
@@ -16,4 +21,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+}
+
+.inside_card_wrapper {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.5rem;
 }
