@@ -4,6 +4,5 @@ build/
 temp/
 .env
 coverage
-ormconfig.json
 dist
 yarn-error.log
