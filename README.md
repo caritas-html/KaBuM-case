@@ -1,6 +1,6 @@
 # KaBuM-case
 
-Olá, este é um projeto, em um monorepo, feito em nodeJS, Typescript, Typeorm com o uso do mySQL em um container docker. O Front-end é composto apenas por ReactJS com Typescript.
+Olá, este é um projeto, em um monorepo, feito em nodeJS, Typescript, Typeorm com o uso do mySQL em um container docker, onde roda tanto o database quanto o servidor node. O Front-end é composto apenas por ReactJS com Typescript.
 
 Passos para executar este projeto:
 
