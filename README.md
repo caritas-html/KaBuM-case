@@ -29,5 +29,3 @@ Aguarde o docker inicializar o banco de dados e rodar as migrações e a aplica�
 
 caso o path para a execução do entrypoint.sh esteja em CLRF, será necessário trocar para LF para rodar. Faça essa mudança,
 logo em seguida execute na pasta raíz do backend `docker-compose down` e em seguida `docker-compose up -d`
-
-#2 
